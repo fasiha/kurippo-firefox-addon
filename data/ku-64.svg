@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg version="1.0" xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64">
+	<rect height="64" width="64" fill="#000" fill-opacity="0.0"/>
+  <text x="48" y="20" text-anchor="middle" dominant-baseline="middle" font-weight="bold" font-size="30px" fill="#444">ク</text>
+  <text x="48" y="52" text-anchor="middle" dominant-baseline="middle" font-weight="bold" font-size="30px" fill="#444">リ</text>
+  <text x="16" y="20" text-anchor="middle" dominant-baseline="middle" font-weight="bold" font-size="30px" fill="#444">ッ</text>
+  <text x="16" y="52" text-anchor="middle" dominant-baseline="middle" font-weight="bold" font-size="30px" fill="#444">ポ</text>
+</svg>
+
