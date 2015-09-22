@@ -14,22 +14,16 @@ var button =
             var tab = require("sdk/tabs").activeTab;
             var worker =
                 tab.attach({contentScriptFile : self.data.url("myxhr.js")});
-            worker.port.emit("kurippo-run");
-            console.log(tab.url, tab.title);
-            /*
-            self.port.on("kurippo-selection", function(selection) {
+            worker.port.emit("askSelection");
+            worker.port.on("sendSelection", function(selection) {
               var obj = {
-                source : "add-on",
+                source : "firefox jpm add-on",
                 url : tab.url,
-                title : tabl.title,
+                title : tab.title,
                 isQuote : true,
                 selection : selection
               };
               console.log(obj);
-            });*/
-            worker.port.emit("drawBorder", "red");
-            worker.port.on("kurippo-selection", function(selection) {
-              console.log("worker said:", selection);
             });
           }
         });
