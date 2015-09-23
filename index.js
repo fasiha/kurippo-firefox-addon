@@ -26,7 +26,7 @@ var button =
         console.log(obj);
 
         // Open the panel, showing transmission
-        feedbackPanel.port.emit("input", "Sending…" + obj.url);
+        feedbackPanel.port.emit("input", "Sending to" + topURL);
         feedbackPanel.show();
 
         // POST to server
@@ -56,7 +56,8 @@ var button =
             // Unknown status code (not 200, not 401).
             feedbackPanel.port.emit(
               "input",
-              "Heard back from server but didn't understand response. Please try again");
+              "Heard back from server but didn't understand response:" +
+                req.status + " " + req.statusText + ':' + res.text);
             setTimeout(function() { feedbackPanel.hide(); }, 5000);
 
           }
