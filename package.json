@@ -1,13 +1,22 @@
 {
   "title": "Kurippo",
-  "name": "kurippo-firefox-plugin",
+  "name": "kurippo-firefox-addon",
   "version": "0.0.1",
-  "description": "Kurippo add-on for CSP workaround",
+  "description": "Kurippo Firefox Add-on",
   "main": "index.js",
   "author": "Ahmed Fasih",
   "engines": {
     "firefox": ">=38.0a1",
     "fennec": ">=38.0a1"
   },
-  "license": "Unlicense"
+  "license": "Unlicense",
+  "preferences": [
+    {
+      "type":"string",
+      "name":"topUrl",
+      "title":"Main Kurippo URL",
+      "description":"E.g., \"https://127.0.0.1:4001\"",
+      "value":"https://127.0.0.1:4001"
+    }
+  ]
 }

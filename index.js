@@ -1,7 +1,7 @@
 "use strict";
 
-var myurl = "https://127.0.0.1:4001";
-
+var topUrl =
+  require('sdk/simple-prefs').prefs['topUrl'] || "https://127.0.0.1:4001";
 var self = require('sdk/self');
 var setTimeout = require("sdk/timers").setTimeout;
 var tabs = require("sdk/tabs");
@@ -32,7 +32,7 @@ var button =
         // POST to server
         var Request = require('sdk/request').Request;
         var xhr = Request({
-          url : myurl + "/clip",
+          url : topUrl + "/clip",
           content : obj,
           onComplete : function(res) {
             console.log("Request done!", res.status, res.statusText, res.text);
@@ -48,7 +48,7 @@ var button =
             if (res.status === 401) {
               feedbackPanel.port.emit(
                 "input", 'Not logged in. Forwarding you to login page now…');
-              tabs.open(myurl);
+              tabs.open(topUrl);
               setTimeout(function() { feedbackPanel.hide(); }, 1000);
               return;
             }
