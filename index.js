@@ -26,7 +26,7 @@ var button =
         console.log(obj);
 
         // Open the panel, showing transmission
-        feedbackPanel.port.emit("input", "Sending to" + topURL);
+        feedbackPanel.port.emit("input", "Sending to" + topUrl);
         feedbackPanel.show();
 
         // POST to server
